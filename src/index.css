@@ -5,8 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #303030;
-  color: #FFFFFF;
+  background-color: #10091b;
+  background: url("./images/ilb.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position:center; */
+  background: cover;
+  color: #ffffff;
+  font-size: xx-large;
+  font-weight: bolder;
 }
 
 code {

@@ -1,0 +1,20 @@
+.bannerup {
+    margin-top: -20%;
+}
+@media (max-width: 700px) {
+
+    .bannerup {
+        margin-top: -45%;
+    }
+}
+@media (max-width: 300px) {
+
+    .bannerup {
+        margin-top: -60%;
+    }
+}
+
+.bannerup p {
+    text-align: center;
+    justify-content: center;
+}
