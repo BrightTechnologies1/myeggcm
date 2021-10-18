@@ -1,28 +1,44 @@
 .connectButton {
-    margin-left: 80% !important;
+    margin-left: -250% !important;
+    margin-top: 90% !important;
     z-index: 23 !important;
 }
 
 .mintArea {
-    margin-top: 8% !important; 
-    margin-left: 14% !important;
+    margin-top: -8% !important; 
+    margin-left: 30% !important;
+    margin-bottom: 5% !important;
+    color: #fff;
+    width: auto !important;
+    align-items: center !important;
+    
 }
+
+
+
 @media (max-width: 1200px) {
 
     .mintArea {
-        margin-top: 10% !important;
+        margin-left: 25% !important;
+        margin-top: -10% !important;
     }
 }
 @media (max-width: 1000px) {
 
     .mintArea {
-        margin-top: 20% !important;
+        margin-left: 25% !important;
+        margin-top: -20% !important;
     }
 }
 @media (max-width: 700px) {
 
     .mintArea {
-        margin-top: 30% !important;
+        margin-top: -10% !important;
+        margin-left: 25% !important;
+    }
+    .connectButton {
+        margin-left: -100% !important;
+        margin-top: 200% !important;
     }
 }
 @media (max-width: 400px) {

@@ -195,6 +195,7 @@ const Home = (props: HomeProps) => {
 			        <ul className="nav-menu scroll-js">
 			          <li className="active"><a href="#header">Home</a></li>
 			          <li><a href="#roadmap">Roadmap</a></li>
+			          <li><a href="#">Whitepaper</a></li>
 			          <li><a href="#faqs">Faq's</a></li>
 			          <li><a href="#team">Team</a></li>
 			        </ul>
@@ -202,23 +203,80 @@ const Home = (props: HomeProps) => {
 		    	</div>
 		    </div>
 		  </header>
-      
-    <main className="mintArea" >
-      {wallet && (
-        <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
-      )}
 
-      {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
+    <section className="banner-area bannerup">
+				<div className="container">
+					<div className="row fullscreen align-items-center justify-content-between">
+						<div className="col-lg-12 banner text-center">
+							<h1>MyEggs NFT</h1>
+              {/*ADD A STYLE HERER WIDGH 70% */}
+							<p> 
+								MyEggs are unique digital collectible assets hatching  on Solana block-chain. Each egg has unique expressions and characteristics which builds up rarity.
+							</p>
+							<a href="https://discord.gg/Bhbcvhvhsf" className="primary-btn text-uppercase">DISCORD</a>
+							<a href="https://twitter.com/MyEggsNFT/" className="primary-btn text-uppercase">TWITTER</a>
+						</div>
+					</div>
+          <div className="countdown-container">
+            <div className="timer">
+              <div className="days">
+                <div className="number">
+                  00
+                </div>
+                <div className="unit">
+                  Days
+                </div>
+              </div>
 
-      {wallet && <p>Total Available: {itemsAvailable}</p>}
+              <div className="hours">
+                <div className="number">
+                  00
+                </div>
+                <div className="unit">
+                  Hours
+                </div>
+              </div>
 
-      {wallet && <p>Redeemed: {itemsRedeemed}</p>}
+              <div className="minutes">
+                <div className="number">
+                  00
+                </div>
+                <div className="unit">
+                  Minutes
+                </div>
+              </div>
 
-      {wallet && <p>Remaining: {itemsRemaining}</p>}
+              <div className="seconds">
+                <div className="number">
+                  00
+                </div>
+                <div className="unit">
+                  Seconds
+                </div>
+              </div>
+            </div>
+          </div>
+				</div>					
+			</section>
 
-      <MintContainer>
+      <main className="row mintArea col-lg-12 col-sm-12" >
+      <div className="row col-6 text-center">
+        {wallet && (
+          <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
+        )}
+
+        {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
+
+        {wallet && <p>Total Available: {itemsAvailable}</p>}
+
+        {wallet && <p>Redeemed: {itemsRedeemed}</p>}
+
+        {wallet && <p>Remaining: {itemsRemaining}</p>}
+      </div>
+      <br/>
+      <MintContainer className="">
         {!wallet ? ( <>
-            <ConnectButton className="connectButton" >Connect Wallet</ConnectButton>
+            <ConnectButton className=" row connectButton col-12" >Connect Wallet</ConnectButton>
           </>
         ) : (
           <MintButton
@@ -261,23 +319,7 @@ const Home = (props: HomeProps) => {
       </Snackbar>
     </main>
 
-    <section className="banner-area bannerup">
-				<div className="container">
-					<div className="row fullscreen align-items-center justify-content-between">
-						<div className="col-lg-12 banner text-center">
-							<h1>MyEggs NFT</h1>
-              {/*ADD A STYLE HERER WIDGH 70% */}
-							<p> 
-								MyEggs are unique digital collectible assets hatching  on Solana block-chain. Each egg has unique expressions and characteristics which builds up rarity.
-							</p>
-							<a href="https://discord.gg/Bhbcvhvhsf" className="primary-btn text-uppercase">DISCORD</a>
-							<a href="https://twitter.com/MyEggsNFT/" className="primary-btn text-uppercase">TWITTER</a>
-						</div>
-					</div>
-				</div>					
-			</section>
-
-      <section id="roadmap" className="timeline pb-120">
+      <section id="roadmap" className="timeline pt-40 pb-120">
 				<div className="text-center">
 					<div className="menu-content pb-70">
 						<div className="title text-center">
@@ -351,6 +393,65 @@ const Home = (props: HomeProps) => {
 						</div>
 					</li>
 				</ul>
+			</section>
+
+      <section id="team" className="services-area section-gap">
+				<div className="container">
+		            <div className="row d-flex justify-content-center">
+		                <div className="menu-content  col-lg-12">
+		                    <div className="title text-center">
+								<h1 className="mb-40">TEAM</h1>		                        
+							</div>
+							<div className="line"> </div>
+		                </div>
+		            </div>
+					<div className="row justify-content-center">
+						<div className="col-lg-3 col-md-12 mb-20">
+							<div className="single-services">
+								<img src={bright} alt="" />
+							</div>	
+							<div className="text-center pt-20">
+								<h4>
+									<time>Bright</time>
+								</h4>
+								<p><b>Creative Developer</b></p>
+							</div>
+						</div>
+						<div className="col-lg-3 col-md-12 mb-20">
+							<div className="single-services">
+								<img src={boycope} alt="" />
+							</div>
+							<div className="text-center pt-20">
+								<h4>
+									<time>Boycope</time>
+								</h4>
+								<p><b>Co-Founder</b></p>
+							</div>	
+						</div>
+						<div className="col-lg-3 col-md-12 mb-20">
+							<div className="single-services">
+								<img src={kizzy} alt="" />
+							</div>
+							<div className="text-center pt-20">
+								<h4>
+									<time>Kizzy</time>
+								</h4>
+								<p><b>Project Manager</b></p>
+							</div>
+						</div>
+						<div className="col-lg-3 col-md-12 mb-20">
+							<div className="single-services">
+              <img src={ZH_Architect_Founder} alt="" />
+							</div>	
+							<div className="text-center pt-20">
+								<h4>
+									<time>ZH_Architect</time>
+								</h4>
+								<p><b>Founder</b></p>
+							</div>			
+						</div>														
+					</div>
+				</div>	
 			</section>	
 
       <section id="faqs" className="faqs pb-120">
@@ -383,69 +484,12 @@ const Home = (props: HomeProps) => {
 				</div>
 			</section>
 
-      <section id="team" className="services-area section-gap">
-				<div className="container">
-		            <div className="row d-flex justify-content-center">
-		                <div className="menu-content  col-lg-12">
-		                    <div className="title text-center">
-								<h1 className="mb-40">TEAM</h1>		                        
-							</div>
-							<div className="line"> </div>
-		                </div>
-		            </div>
-					<div className="row justify-content-center">
-						<div className="col-lg-3 col-md-6 mb-20">
-							<div className="single-services">
-								<img src={bright} alt="" />
-							</div>	
-							<div className="text-center pt-20">
-								<h4>
-									<time>Bright</time>
-								</h4>
-								<p><b>Developer</b></p>
-							</div>
-						</div>
-						<div className="col-lg-3 col-md-6 mb-20">
-							<div className="single-services">
-								<img src={boycope} alt="" />
-							</div>
-							<div className="text-center pt-20">
-								<h4>
-									<time>Boycope</time>
-								</h4>
-								<p><b>Artist</b></p>
-							</div>	
-						</div>
-						<div className="col-lg-3 col-md-6 mb-20">
-							<div className="single-services">
-								<img src={kizzy} alt="" />
-							</div>
-							<div className="text-center pt-20">
-								<h4>
-									<time>Kizzy</time>
-								</h4>
-								<p><b>Artist</b></p>
-							</div>
-						</div>
-						<div className="col-lg-3 col-md-6 mb-20">
-							<div className="single-services">
-              <img src={ZH_Architect_Founder} alt="" />
-							</div>	
-							<div className="text-center pt-20">
-								<h4>
-									<time>ZH_Architect</time>
-								</h4>
-								<p><b>Founder</b></p>
-							</div>			
-						</div>														
-					</div>
-				</div>	
-			</section>
+      
 
       <footer className="footer-area section-gap">
         <div className="container widget">
             <div className="row col-12">
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="row col-lg-12 col-md-12 col-sm-12">
                   <div className="single-footer-widget align-items-center">                               
                       <p className="footer-text">
                           Copyright &copy; 2021 All rights reserved | MyEggs 
@@ -453,15 +497,6 @@ const Home = (props: HomeProps) => {
                       </p>
                   </div>
               </div>
-
-						  <div className="col-lg-6 col-md-6 col-sm-6 social-widget">
-						    <div className="single-footer-widget row">
-							      <div className="footer-social d-flex align-items-center col-sm-12">
-								        <a href="3"><i className="fa fa-twitter"></i></a>
-								        <a href="4"><i className="fa fa-behance"></i></a>
-							        </div>
-						      </div>
-					    </div>
            </div>		
         </div>
       </footer>

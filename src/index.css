@@ -6,11 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #10091b;
-  background: url("./images/ilb.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url("./images/banner2.jpg");
+  height: 150vh;
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position:center; */
+  background-position:center;
   background: cover;
+  align-items: center;
   color: #ffffff;
   font-size: xx-large;
   font-weight: bolder;
