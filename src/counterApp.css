@@ -1,0 +1,9 @@
+.counterApp {
+  margin: 0;
+  margin-top: -200px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans";
+}

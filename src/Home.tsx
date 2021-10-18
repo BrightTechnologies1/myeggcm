@@ -15,6 +15,9 @@ import {
   shortenAddress,
 } from "./candy-machine";
 
+import CountdownTimer from './Components/CountdownTimer/CountdownTimer';
+
+
 // css imports
 import "./css/linearicons.css";
 import "./css/font-awesome.min.css";
@@ -23,6 +26,7 @@ import "./css/magnific-popup.css";
 import "./css/nice-select.css";
 import "./css/animate.min.css";
 import "./css/main.css";
+import './counterApp.css';
 
 // correction css
 import "./css/cssedit/connectButton.css";
@@ -217,46 +221,12 @@ const Home = (props: HomeProps) => {
 							<a href="https://twitter.com/MyEggsNFT/" className="primary-btn text-uppercase">TWITTER</a>
 						</div>
 					</div>
-          <div className="countdown-container">
-            <div className="timer">
-              <div className="days">
-                <div className="number">
-                  00
-                </div>
-                <div className="unit">
-                  Days
-                </div>
-              </div>
-
-              <div className="hours">
-                <div className="number">
-                  00
-                </div>
-                <div className="unit">
-                  Hours
-                </div>
-              </div>
-
-              <div className="minutes">
-                <div className="number">
-                  00
-                </div>
-                <div className="unit">
-                  Minutes
-                </div>
-              </div>
-
-              <div className="seconds">
-                <div className="number">
-                  00
-                </div>
-                <div className="unit">
-                  Seconds
-                </div>
-              </div>
-            </div>
+          
+          <div className="counterApp">
+            <CountdownTimer
+              countdownTimestampMs={1659983662000}/>
           </div>
-				</div>					
+        </div>  
 			</section>
 
       <main className="row mintArea col-lg-12 col-sm-12" >
